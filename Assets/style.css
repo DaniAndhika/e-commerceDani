@@ -1,0 +1,177 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chat {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 9;
+    font-size: 3em;
+    color: #25d366;
+    cursor: pointer;
+}
+
+header {
+    width: 80%;
+    height: 60px;
+    margin: auto;
+}
+
+.nav-list {
+    display: flex;
+    box-shadow: 0 0 10px rgb(13, 109, 80, 0.8);
+    border-radius: 20px;
+}
+
+.nav-item {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* list-style-type: none; */
+}
+
+.nav-link {
+    opacity: 0.5;
+    text-decoration: none;
+    transition: 0,25s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    transform: translateY(-10%);
+}
+
+.nav-icon {
+    color:  rgb(13, 109, 80);
+    /* display: none !important; */
+}
+
+.nav-text {
+    font-weight: bolder;
+    color: rgb(13, 109, 80);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    background-color: rgb(13, 109, 80);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col {
+    /* border: 1px solid black; */
+    flex-basis: 25%;
+    padding: 10px;
+    margin: 20px;
+    min-width: 200px;
+    box-shadow: 0 0 5px rgb(13, 109, 80);
+    cursor: pointer;
+}
+
+.col:hover {
+        transform: translateY(-2%);
+}
+
+.col img {
+    width: 100%;
+}
+
+footer {
+    height: 30px;
+    background-color: rgb(13, 109, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 487px) {
+    /* lakukan responsive code */
+    header {
+        width: 100%;
+        position: fixed;
+        bottom: 16px;
+        left: 0;
+        z-index: 9;
+        padding: 10px;
+        
+    }
+
+    .chat {
+        bottom: 75px;
+        right: 10px;
+        font-size: 2em;
+    }
+
+    .nav-list {
+        background-color: white;
+    }
+
+    .nav-icon {
+        /* display: block !important; */
+        font-size: 24px;
+        transition: 0.25s;
+    }
+
+    .nav-icon:hover {
+        transform: translateY(-10%);
+
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .col {
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    .col:hover {
+            transform: none;
+    }
+
+    footer {
+        font-weight: 300;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+}
